@@ -1,0 +1,141 @@
+:root {
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --darkBlue: hsl(212, 21%, 14%);
+    --grayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--white);
+    width: 55rem;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px #0002;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+.product-mobile {
+    display: none;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.product-imagen  {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    display: block;
+}
+
+.title {
+    padding: 2rem 2rem;
+}
+
+.perfume {
+    letter-spacing: 1px;
+    margin: 1.2rem 0rem;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--grayishBlue);
+    margin: .8rem auto;
+    line-height: 22px;
+}
+
+.price {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    color: var(--darkCyan);
+    margin: 2rem 0rem;
+    display: flex;
+    align-items: center;
+}
+
+.price span {
+    color:var(--grayishBlue);
+    padding-left: 0.8rem;
+    text-decoration: line-through;
+    font-size: 18px;
+}
+
+
+
+a {
+    background-color: var(--darkCyan);
+    padding: 1rem 6rem;
+    color:  var(--white);
+    text-decoration: none;
+    border-radius: 0.7rem;
+    font-size: 14px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-cart {
+    padding-left: 0.7rem;
+}
+a:hover {
+    background-color: var(--darkBlue);
+}
+
+@media screen and (max-width: 692px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 34rem;
+        height: 62rem; 
+    }
+}
+
+@media screen and (max-width: 692px) {
+    .product-imagen {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 692px) {
+    .product-mobile {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+
+
+
+
+
+
